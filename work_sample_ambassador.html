@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Champion Network Enablement Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+            font-size: 13px;
+        }
+        
+        .document {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 35px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .header h1 {
+            color: #1e293b;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+        
+        .header .subtitle {
+            color: #64748b;
+            font-size: 14px;
+        }
+        
+        .intro-box {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 18px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        
+        .intro-box h3 {
+            color: #92400e;
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+        
+        .intro-box p {
+            color: #78350f;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .process-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px;
+        }
+        
+        .process-card h4 {
+            color: #1e293b;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .process-card h4 .icon {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .process-card ul {
+            margin-left: 18px;
+            color: #475569;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+        .process-card li {
+            margin: 5px 0;
+        }
+        
+        .criteria-box {
+            background: #eff6ff;
+            border: 2px solid #3b82f6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .criteria-box h4 {
+            color: #1e40af;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        
+        .criteria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .criteria-item {
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #1e293b;
+        }
+        
+        .criteria-item strong {
+            display: block;
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+        
+        .training-curriculum {
+            background: #f1f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .curriculum-phase {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        
+        .curriculum-phase:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .curriculum-phase h5 {
+            color: #1e293b;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .phase-badge {
+            background: #3b82f6;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .curriculum-phase ul {
+            margin-left: 18px;
+            color: #475569;
+            font-size: 12px;
+        }
+        
+        .curriculum-phase li {
+            margin: 4px 0;
+        }
+        
+        .support-model {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+            margin: 15px 0;
+        }
+        
+        .support-card {
+            background: white;
+            border: 2px solid #10b981;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .support-card .icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .support-card h4 {
+            color: #065f46;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        
+        .support-card p {
+            color: #064e3b;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+        
+        .metrics-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .metrics-table th {
+            background: #1e293b;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-size: 12px;
+        }
+        
+        .metrics-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 12px;
+            color: #475569;
+        }
+        
+        .metrics-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
+        
+        .highlight-box {
+            background: #dcfce7;
+            border-left: 4px solid #10b981;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .highlight-box h4 {
+            color: #065f46;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box p {
+            color: #064e3b;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        
+        .watermark {
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 12px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="document">
+        <div class="header">
+            <h1>AI Champion Network Enablement Guide</h1>
+            <div class="subtitle">Scalable Model for Internal AI Ambassadors | Achieving 85% Self-Service</div>
+        </div>
+        
+        <div class="intro-box">
+            <h3>🎯 Why Champion Networks Work</h3>
+            <p><strong>The Problem:</strong> Traditional training doesn't scale and creates consultant dependency. People need in-the-moment help from peers who understand their specific challenges.</p>
+            <p style="margin-top: 8px;"><strong>The Solution:</strong> Champion Networks leverage early adopters as peer trainers, creating organic momentum and sustainable support. Our model has achieved 85% self-service utilization, reducing long-term training costs while accelerating adoption.</p>
+        </div>
+        
+        <!-- IDENTIFICATION -->
+        <div class="section">
+            <div class="section-title">1️⃣ Champion Identification & Selection</div>
+            
+            <div class="criteria-box">
+                <h4>Champion Selection Criteria</h4>
+                <div class="criteria-grid">
+                    <div class="criteria-item">
+                        <strong>✓ Early Adopter</strong>
+                        Already experimenting with AI tools; curious and enthusiastic
+                    </div>
+                    <div class="criteria-item">
+                        <strong>✓ Peer Respect</strong>
+                        Trusted by teammates; natural go-to person for help
+                    </div>
+                    <div class="criteria-item">
+                        <strong>✓ Communication Skills</strong>
+                        Can explain technical concepts simply
+                    </div>
+                    <div class="criteria-item">
+                        <strong>✓ Time Availability</strong>
+                        Can commit 3-5 hours/week for office hours and support
+                    </div>
+                    <div class="criteria-item">
+                        <strong>✓ Function Knowledge</strong>
+                        Deep understanding of Legal or Finance workflows
+                    </div>
+                    <div class="criteria-item">
+                        <strong>✓ Growth Mindset</strong>
+                        Willing to learn, iterate, and share failures
+                    </div>
+                </div>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <h4><span class="icon">🔍</span> Discovery Methods</h4>
+                    <ul>
+                        <li><strong>Manager nominations:</strong> Ask function leads to identify enthusiasts</li>
+                        <li><strong>Self-nomination:</strong> Open application process with clear expectations</li>
+                        <li><strong>Usage data:</strong> Identify power users from tool analytics</li>
+                        <li><strong>Informal observation:</strong> Note who's already helping peers</li>
+                    </ul>
+                </div>
+                
+                <div class="process-card">
+                    <h4><span class="icon">📊</span> Target Structure</h4>
+                    <ul>
+                        <li><strong>Ratio:</strong> 1 champion per 20-30 employees</li>
+                        <li><strong>Legal team:</strong> 2-3 champions minimum</li>
+                        <li><strong>Finance team:</strong> 2-3 champions minimum</li>
+                        <li><strong>Total network:</strong> 8-12 champions for 200-300 employees</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TRAINING -->
+        <div class="section">
+            <div class="section-title">2️⃣ Champion Training Curriculum</div>
+            
+            <div class="training-curriculum">
+                <div class="curriculum-phase">
+                    <h5><span class="phase-badge">WEEK 1-2</span> Deep Technical Fluency</h5>
+                    <ul>
+                        <li>Advanced prompt engineering techniques and frameworks</li>
+                        <li>Function-specific use cases: Legal (contract review, compliance) & Finance (variance analysis, modeling)</li>
+                        <li>Understanding AI limitations, biases, and when NOT to use AI</li>
+                        <li>Data privacy, ethics, and compliance guardrails</li>
+                        <li>Troubleshooting common issues and error messages</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-phase">
+                    <h5><span class="phase-badge">WEEK 3</span> Peer Training Skills</h5>
+                    <ul>
+                        <li>Adult learning principles: how people learn new technology</li>
+                        <li>Coaching techniques: asking vs. telling, active listening</li>
+                        <li>Handling resistance: addressing fear, skepticism, and frustration</li>
+                        <li>Adapting explanations for different experience levels</li>
+                        <li>Celebrating small wins and building confidence</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-phase">
+                    <h5><span class="phase-badge">WEEK 4</span> Champion Operations</h5>
+                    <ul>
+                        <li>Office hours structure and best practices</li>
+                        <li>Slack/Teams channel management and response protocols</li>
+                        <li>Escalation paths: when to involve IT, Legal, or consultants</li>
+                        <li>Documentation expectations: building the knowledge base</li>
+                        <li>Tracking metrics: support requests, resolution time, satisfaction</li>
+                    </ul>
+                </div>
+                
+                <div class="curriculum-phase">
+                    <h5><span class="phase-badge">ONGOING</span> Continuous Learning</h5>
+                    <ul>
+                        <li>Monthly champion cohort meetings: share challenges, solutions, and innovations</li>
+                        <li>Quarterly advanced training on new AI capabilities</li>
+                        <li>Peer shadowing and knowledge exchange across functions</li>
+                        <li>Access to external resources, webinars, and certification programs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SUPPORT MODEL -->
+        <div class="section">
+            <div class="section-title">3️⃣ Champion Support Model</div>
+            
+            <div class="support-model">
+                <div class="support-card">
+                    <div class="icon">⏰</div>
+                    <h4>Office Hours</h4>
+                    <p>2-3 hours/week scheduled drop-in sessions for real-time problem solving</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="icon">💬</div>
+                    <h4>Slack/Teams Channel</h4>
+                    <p>Async Q&A with 24-hour response SLA; peer-to-peer help encouraged</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="icon">📚</div>
+                    <h4>Knowledge Base</h4>
+                    <p>Champions document FAQs, troubleshooting guides, and best practices</p>
+                </div>
+                
+                <div class="support-card">
+                    <div class="icon">🎓</div>
+                    <h4>Lunch & Learns</h4>
+                    <p>Monthly 30-min sessions showcasing new use cases and success stories</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>🚀 Escalation Protocol</h4>
+                <p><strong>Level 1 (Champion handles):</strong> Basic prompting help, function-specific use cases, workflow integration questions<br>
+                <strong>Level 2 (Escalate to IT/Admin):</strong> Technical errors, access issues, system configuration<br>
+                <strong>Level 3 (Escalate to Legal/Compliance):</strong> Data privacy concerns, ethical questions, policy violations<br>
+                <strong>Level 4 (Escalate to Consultant):</strong> Complex process redesign, strategic planning, new capability evaluation</p>
+            </div>
+        </div>
+        
+        <!-- METRICS -->
+        <div class="section">
+            <div class="section-title">4️⃣ Measuring Champion Effectiveness</div>
+            
+            <table class="metrics-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>How to Measure</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Self-Service Rate</strong></td>
+                        <td>% of issues resolved by champions vs. IT/consultants</td>
+                        <td>85%+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Response Time</strong></td>
+                        <td>Avg time from question posted to answer provided</td>
+                        <td>&lt;24 hours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Satisfaction Score</strong></td>
+                        <td>Post-interaction survey: "How helpful was this?"</td>
+                        <td>4.5/5+</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Office Hours Utilization</strong></td>
+                        <td>Avg # of employees attending per session</td>
+                        <td>5-10/session</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Knowledge Base Growth</strong></td>
+                        <td># of articles/guides created by champions</td>
+                        <td>2-3/month</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Champion Retention</strong></td>
+                        <td>% of champions still active after 6 months</td>
+                        <td>80%+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- RECOGNITION -->
+        <div class="section">
+            <div class="section-title">5️⃣ Champion Recognition & Motivation</div>
+            
+            <div class="process-grid">
+                <div class="process-card">
+                    <h4><span class="icon">🏆</span> Formal Recognition</h4>
+                    <ul>
+                        <li><strong>Certification:</strong> Official "AI Champion" credential for resume/LinkedIn</li>
+                        <li><strong>Executive visibility:</strong> Quarterly reports to leadership highlighting champion impact</li>
+                        <li><strong>Performance reviews:</strong> Champion contributions noted in annual reviews</li>
+                        <li><strong>Awards:</strong> Annual "Champion of the Year" recognition</li>
+                    </ul>
+                </div>
+                
+                <div class="process-card">
+                    <h4><span class="icon">🎯</span> Intrinsic Motivation</h4>
+                    <ul>
+                        <li><strong>Skill development:</strong> Cutting-edge AI expertise valuable for career growth</li>
+                        <li><strong>Leadership opportunity:</strong> Practice coaching and influencing skills</li>
+                        <li><strong>Network expansion:</strong> Cross-functional relationships and visibility</li>
+                        <li><strong>Impact:</strong> Tangible contribution to organizational transformation</li>
+                    </ul>
+                </div>
+                
+                <div class="process-card">
+                    <h4><span class="icon">💡</span> Ongoing Support</h4>
+                    <ul>
+                        <li><strong>Protected time:</strong> Manager commitment to 3-5 hours/week for champion duties</li>
+                        <li><strong>Priority access:</strong> Early access to new AI tools and features</li>
+                        <li><strong>Training budget:</strong> Funding for external courses and certifications</li>
+                        <li><strong>Community:</strong> Sense of belonging to an elite peer group</li>
+                    </ul>
+                </div>
+                
+                <div class="process-card">
+                    <h4><span class="icon">📈</span> Career Benefits</h4>
+                    <ul>
+                        <li><strong>Resume builder:</strong> Demonstrated leadership and technical skills</li>
+                        <li><strong>Promotion readiness:</strong> Coaching and influence experience</li>
+                        <li><strong>Internal mobility:</strong> Visibility across functions opens new opportunities</li>
+                        <li><strong>Future-proofing:</strong> AI skills increasingly valuable in all roles</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlight-box" style="background: #eff6ff; border-color: #3b82f6;">
+            <h4>✨ Success Story: 85% Self-Service Achievement</h4>
+            <p>In a recent 9-month AI transformation engagement, we built a Champion Network of 10 ambassadors supporting 300 employees. Within 4 months, 85% of AI-related questions were resolved by champions without escalation. This reduced IT support tickets by 60% and created sustainable, peer-led adoption that continued long after the consulting engagement ended. Champions reported high satisfaction with their roles, with 90% retention after 12 months.</p>
+        </div>
+        
+        <div class="watermark">
+            WORK SAMPLE - Jeanette Desruisseaux | AI Transformation Consultant<br>
+            Champion enablement framework for portfolio demonstration purposes
+        </div>
+    </div>
+</body>
+</html>
